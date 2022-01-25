@@ -44,7 +44,7 @@ class OrderTest extends TestCase
     {
         return [
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_delivery_date_in_order_item.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_delivery_date_in_order_item.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -90,7 +90,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_delivery_date.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_delivery_date.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -136,7 +136,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_contactdetails.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_contactdetails.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -194,7 +194,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_udx.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_udx.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -245,7 +245,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_udx_header.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_udx_header.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -297,7 +297,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_address.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_address.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -362,7 +362,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_payment_account.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_payment_account.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -421,7 +421,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_payment_card_amex.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_payment_card_amex.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -471,7 +471,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_payment_debit.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_payment_debit.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -516,7 +516,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_payment_cash.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_payment_cash.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -561,7 +561,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order_with_payment_check.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order_with_payment_check.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -606,7 +606,7 @@ class OrderTest extends TestCase
                 ]
             ],
             [
-                'file' => __DIR__.'/../assets/minimal_valid_order.xml',
+                'file' => __DIR__ . '/../assets/minimal_valid_order.xml',
                 'data' => [
                     'header' => [
                         'info' => [

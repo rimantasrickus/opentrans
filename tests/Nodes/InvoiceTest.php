@@ -28,7 +28,7 @@ class InvoiceTest extends TestCase
             'header' => [
                 'info' => [
                     'id' => 'invoice-id-1',
-                    'date' => (new DateTimeImmutable())->format('Y-m-d'),
+                    'date' => '2020-01-27',
                     'parties' => [
                         [
                             'id' => 'org.de.issuer'

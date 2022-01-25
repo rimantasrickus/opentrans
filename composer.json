@@ -1,6 +1,6 @@
 {
-    "name": "naugrim/opentrans",
-    "description": "A library to create openTRANS compatible XML documents.",
+    "name": "rimantasrickus/opentrans",
+    "description": "A fork of naugrim/opentrans",
     "type": "library",
     "license": "MIT",
     "authors": [

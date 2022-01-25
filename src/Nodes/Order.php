@@ -24,6 +24,7 @@ class Order implements NodeInterface
 
     /**
      * @Serializer\Expose
+     * @Serializer\Type("string")
      * @Serializer\XmlAttribute
      *
      * @var string

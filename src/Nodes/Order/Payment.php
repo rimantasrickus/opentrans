@@ -10,10 +10,10 @@ class Payment implements NodeInterface
 {
     /**
      * @Serializer\Expose
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      * @Serializer\SerializedName("DEBIT")
      *
-     * @var string
+     * @var bool
      */
     protected $debit;
 

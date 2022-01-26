@@ -52,6 +52,25 @@ class Info implements NodeInterface
     protected $partiesReference;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("bmecat:CURRENCY")
+     *
+     * @var string
+     */
+    protected $currency;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Order\Remarks>")
+     * @Serializer\SerializedName("REMARKS")
+     * @Serializer\XmlList(inline = true, entry = "REMARKS")
+     *
+     * @var Remarks[]
+     */
+    protected $remarks;
+
+    /**
      * @return string
      */
     public function getId(): string
@@ -137,6 +156,59 @@ class Info implements NodeInterface
     public function setPartiesReference(PartiesReference $partiesReference): Info
     {
         $this->partiesReference = $partiesReference;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency(): string
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     * @return Info
+     */
+    public function setCurrency(string $currency): Info
+    {
+        $this->currency = $currency;
+        return $this;
+    }
+
+    /**
+     * @return Remarks
+     */
+    public function getRemarks(): Remarks
+    {
+        return $this->remarks;
+    }
+
+    /**
+     * @param Remarks[] $remarks
+     * @return Info
+     * @throws InvalidSetterException
+     * @throws UnknownKeyException
+     */
+    public function setRemarks(array $remarks): Info
+    {
+        foreach ($remarks as $remark) {
+            if (!$remark instanceof Remarks) {
+                $remark = NodeBuilder::fromArray($remark, new Remarks());
+            }
+            $this->addRemark($remark);
+        }
+        return $this;
+    }
+
+    /**
+     * @param Remarks $remark
+     * @return $this
+     */
+    public function addRemark(Remarks $remark)
+    {
+        $this->remarks[] = $remark;
         return $this;
     }
 }

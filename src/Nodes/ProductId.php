@@ -13,7 +13,7 @@ class ProductId implements NodeInterface
 {
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierPid")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierPid")
      * @Serializer\SerializedName("bmecat:SUPPLIER_PID")
      *
      * @var SupplierPid
@@ -22,7 +22,7 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierIdRef")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierIdRef")
      * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
@@ -58,7 +58,7 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\InternationalPid")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\InternationalPid")
      * @Serializer\SerializedName("bmecat:INTERNATIONAL_PID")
      *
      * @var InternationalPid
@@ -67,7 +67,7 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\BuyerPid")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\BuyerPid")
      * @Serializer\SerializedName("bmecat:BUYER_PID")
      *
      * @var BuyerPid

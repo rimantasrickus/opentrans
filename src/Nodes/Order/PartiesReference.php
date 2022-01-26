@@ -15,7 +15,7 @@ class PartiesReference implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\BuyerIdRef")
-     * @Serializer\SerializedName("bme:BUYER_IDREF")
+     * @Serializer\SerializedName("bmecat:BUYER_IDREF")
      *
      * @var BuyerIdRef
      */
@@ -24,7 +24,7 @@ class PartiesReference implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierIdRef")
-     * @Serializer\SerializedName("bme:SUPPLIER_IDREF")
+     * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
      */

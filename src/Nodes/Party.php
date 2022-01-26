@@ -11,7 +11,7 @@ class Party implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:PARTY_ID")
+     * @Serializer\SerializedName("bmecat:PARTY_ID")
      *
      * @var string
      */

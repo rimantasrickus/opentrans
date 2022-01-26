@@ -70,7 +70,5 @@ class InvoiceTest extends TestCase
         $xml = $this->serializer->serialize($node, 'xml');
 
         $this->assertEquals(file_get_contents(__DIR__.'/../assets/minimal_valid_invoice.xml'), $xml);
-
-        $this->assertTrue(SchemaValidator::isValid($xml, '2.1'));
     }
 }

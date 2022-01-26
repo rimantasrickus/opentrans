@@ -59,6 +59,15 @@ class Info implements NodeInterface
      * @var string
      */
     protected $currency;
+    
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Order\Payment")
+     * @Serializer\SerializedName("PAYMENT")
+     *
+     * @var Payment
+     */
+    protected $payment;
 
     /**
      * @Serializer\Expose
@@ -176,11 +185,29 @@ class Info implements NodeInterface
         $this->currency = $currency;
         return $this;
     }
+    
+    /**
+     * @return Payment
+     */
+    public function getPayment(): Payment
+    {
+        return $this->payment;
+    }
 
     /**
-     * @return Remarks
+     * @param Payment $payment
+     * @return Info
      */
-    public function getRemarks(): Remarks
+    public function setPayment(Payment $payment): Info
+    {
+        $this->payment = $payment;
+        return $this;
+    }
+
+    /**
+     * @return Remarks[]
+     */
+    public function getRemarks(): array
     {
         return $this->remarks;
     }

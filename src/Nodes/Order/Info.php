@@ -196,6 +196,14 @@ class Info implements NodeInterface
     }
 
     /**
+     * @return Payment
+     */
+    public function getPayment(): Payment
+    {
+        return $this->payment;
+    }
+
+    /**
      * @return bool
      */
     public function isPartialShipmentAllowed(): bool

@@ -2,7 +2,8 @@
 
 namespace Naugrim\OpenTrans\Nodes\Order;
 
-use /** @noinspection PhpUnusedAliasInspection */
+use
+    /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 
@@ -43,9 +44,9 @@ class PaymentTerms implements NodeInterface
         $this->term = $term;
         return $this;
     }
-    
+
     /**
-     * @return PaymentTime
+     * @return PaymentTerm
      */
     public function getPaymentTime(): PaymentTime
     {

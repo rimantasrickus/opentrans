@@ -5,16 +5,16 @@ namespace Naugrim\OpenTrans\Nodes;
 use /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
-use Naugrim\BMEcat\Nodes\SupplierPid;
-use Naugrim\BMEcat\Nodes\BuyerPid;
-use Naugrim\BMEcat\Nodes\InternationalPid;
-use Naugrim\BMEcat\Nodes\SupplierIdRef;
+use Naugrim\OpenTrans\Nodes\SupplierPid;
+use Naugrim\OpenTrans\Nodes\BuyerPid;
+use Naugrim\OpenTrans\Nodes\InternationalPid;
+use Naugrim\OpenTrans\Nodes\SupplierIdRef;
 
 class ProductId implements NodeInterface
 {
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierPid")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierPid")
      * @Serializer\SerializedName("bmecat:SUPPLIER_PID")
      *
      * @var SupplierPid
@@ -23,7 +23,7 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierIdRef")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierIdRef")
      * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
@@ -59,7 +59,7 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\BMEcat\Nodes\InternationalPid")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\InternationalPid")
      * @Serializer\SerializedName("bmecat:INTERNATIONAL_PID")
      *
      * @var InternationalPid
@@ -68,7 +68,7 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\BMEcat\Nodes\BuyerPid")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\BuyerPid")
      * @Serializer\SerializedName("bmecat:BUYER_PID")
      *
      * @var BuyerPid

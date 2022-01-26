@@ -30,6 +30,24 @@ class Party implements NodeInterface
 
     /**
      * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("PARTY_ROLE")
+     *
+     * @var string
+     */
+    protected $role;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Address")
+     * @Serializer\SerializedName("ADDRESS")
+     *
+     * @var Address
+     */
+    protected $address;
+
+    /**
+     * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\PartyRole")
      * @Serializer\SerializedName ("PARTY_ROLE")
      * @var PartyRole
@@ -104,7 +122,6 @@ class Party implements NodeInterface
         $this->role = $role;
         return $this;
     }
-
     /**
      * @return Address
      */

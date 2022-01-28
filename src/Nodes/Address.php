@@ -99,6 +99,16 @@ class Address implements NodeInterface
     protected $email;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("bmecat:ADDRESS_REMARKS")
+     *
+     * @var string
+     */
+    protected $packStation;
+ 
+
+    /**
      * @return string
      */
     public function getName(): string
@@ -275,6 +285,24 @@ class Address implements NodeInterface
     public function setEmail(string $email): Address
     {
         $this->email = $email;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPackStation(): string
+    {
+        return $this->packStation;
+    }
+
+    /**
+     * @param string $packStation
+     * @return Party
+     */
+    public function setPackStation(string $packStation): Address
+    {
+        $this->packStation = $packStation;
         return $this;
     }
 }

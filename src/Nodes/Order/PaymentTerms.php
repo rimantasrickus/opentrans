@@ -45,7 +45,7 @@ class PaymentTerms implements NodeInterface
     }
     
     /**
-     * @return PaymentTerm
+     * @return PaymentTime
      */
     public function getPaymentTime(): PaymentTime
     {

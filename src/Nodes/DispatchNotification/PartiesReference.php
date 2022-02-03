@@ -21,7 +21,7 @@ class PartiesReference implements NodeInterface
     
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DeliveryIdRef")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DelivererIdRef")
      * @Serializer\SerializedName("DELIVERER_IDREF")
      *
      * @var DelivererIdRef

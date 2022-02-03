@@ -2,7 +2,8 @@
 
 namespace Naugrim\OpenTrans\Nodes\DispatchNotification;
 
-use /** @noinspection PhpUnusedAliasInspection */
+use
+    /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\OpenTrans\Nodes\DeliveryIdRef;
 use Naugrim\OpenTrans\Nodes\DelivererIdRef;
@@ -18,10 +19,10 @@ class PartiesReference implements NodeInterface
      * @var DeliveryIdRef
      */
     protected $deliveryIdRef;
-    
+
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DelivererIdRef")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DeliveryIdRef")
      * @Serializer\SerializedName("DELIVERER_IDREF")
      *
      * @var DelivererIdRef
@@ -45,7 +46,7 @@ class PartiesReference implements NodeInterface
         $this->deliveryIdRef = $deliveryIdRef;
         return $this;
     }
-    
+
     /**
      * @return DelivererIdRef
      */

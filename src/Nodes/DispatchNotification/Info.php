@@ -30,7 +30,15 @@ class Info implements NodeInterface
      * @var string
      */
     protected $date;
-
+    
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\DeliveryDate")
+     * @Serializer\SerializedName("DELIVERY_DATE")
+     *
+     * @var DeliveryDate
+     */
+    protected $deliveryDate;
 
     /**
      *
@@ -112,6 +120,24 @@ class Info implements NodeInterface
     public function setDate(string $date): Info
     {
         $this->date = $date;
+        return $this;
+    }
+    
+    /**
+     * @return DeliveryDate
+     */
+    public function getDeliveryDate(): DeliveryDate
+    {
+        return $this->deliveryDate;
+    }
+
+    /**
+     * @param DeliveryDate $deliveryDate
+     * @return Info
+     */
+    public function setDeliveryDate(DeliveryDate $deliveryDate): Info
+    {
+        $this->deliveryDate = $deliveryDate;
         return $this;
     }
 

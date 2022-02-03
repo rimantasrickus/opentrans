@@ -5,9 +5,12 @@ namespace Naugrim\OpenTrans\Nodes;
 use /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
+use Naugrim\OpenTrans\Nodes\Concerns\HasTypeAttribute;
 
 class Party implements NodeInterface
 {
+    use HasTypeAttribute;
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")

@@ -4,12 +4,15 @@ namespace Naugrim\OpenTrans\Nodes;
 
 use JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
+use Naugrim\OpenTrans\Nodes\Concerns\HasTypeAttribute;
 
 /**
  * @Serializer\XmlRoot("PARTY")
  */
 class Party implements NodeInterface
 {
+    use HasTypeAttribute;
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\PartyId")

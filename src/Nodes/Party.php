@@ -36,18 +36,18 @@ class Party implements NodeInterface
     protected $address;
 
     /**
-     * @return string
+     * @return PartyIdRef
      */
-    public function getId(): string
+    public function getId(): PartyIdRef
     {
         return $this->id;
     }
 
     /**
-     * @param string $id
+     * @param PartyIdRef $id
      * @return Party
      */
-    public function setId(string $id): Party
+    public function setId(PartyIdRef $id): Party
     {
         $this->id = $id;
         return $this;

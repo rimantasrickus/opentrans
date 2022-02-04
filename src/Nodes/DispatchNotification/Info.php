@@ -11,9 +11,6 @@ use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\OpenTrans\Nodes\Party;
 use Naugrim\OpenTrans\Nodes\SupplierIdRef;
 
-/**
- * @Serializer\AccessorOrder("custom", custom = {"id", "date", "deliveryDate", "parties", "partiesReference", "supplierIdRef", "shipmentId", "trackingUrl"})
- */
 class Info implements NodeInterface
 {
     /**
@@ -56,21 +53,21 @@ class Info implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\PartiesReference")
-     * @Serializer\SerializedName("SHIPMENT_PARTIES_REFERENCE")
-     *
-     * @var PartiesReference
-     */
-    protected $partiesReference;
-
-    /**
-     * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierIdRef")
      * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
      */
     protected $supplierIdRef;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\PartiesReference")
+     * @Serializer\SerializedName("SHIPMENT_PARTIES_REFERENCE")
+     *
+     * @var PartiesReference
+     */
+    protected $partiesReference;
     
     /**
      * @Serializer\Expose
@@ -180,24 +177,6 @@ class Info implements NodeInterface
     }
 
     /**
-     * @return PartiesReference
-     */
-    public function getPartiesReference(): PartiesReference
-    {
-        return $this->partiesReference;
-    }
-
-    /**
-     * @param PartiesReference $partiesReference
-     * @return Info
-     */
-    public function setPartiesReference(PartiesReference $partiesReference): Info
-    {
-        $this->partiesReference = $partiesReference;
-        return $this;
-    }
-
-    /**
      * @return SupplierIdRef
      */
     public function getSupplierIdRef(): SupplierIdRef
@@ -212,6 +191,24 @@ class Info implements NodeInterface
     public function setSupplierIdRef(SupplierIdRef $supplierIdRef): Info
     {
         $this->supplierIdRef = $supplierIdRef;
+        return $this;
+    }
+
+    /**
+     * @return PartiesReference
+     */
+    public function getPartiesReference(): PartiesReference
+    {
+        return $this->partiesReference;
+    }
+
+    /**
+     * @param PartiesReference $partiesReference
+     * @return Info
+     */
+    public function setPartiesReference(PartiesReference $partiesReference): Info
+    {
+        $this->partiesReference = $partiesReference;
         return $this;
     }
     

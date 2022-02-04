@@ -11,6 +11,9 @@ use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\OpenTrans\Nodes\Party;
 use Naugrim\OpenTrans\Nodes\SupplierIdRef;
 
+/**
+ * @Serializer\AccessorOrder("custom", custom = {"id", "date", "deliveryDate", "parties", "partiesReference", "supplierIdRef", "shipmentId", "trackingUrl"})
+ */
 class Info implements NodeInterface
 {
     /**

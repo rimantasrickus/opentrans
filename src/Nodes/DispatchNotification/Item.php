@@ -47,7 +47,7 @@ class Item implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\PartiesReference")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\OrderReference")
      * @Serializer\SerializedName("ORDER_REFERENCE")
      *
      * @var OrderReference

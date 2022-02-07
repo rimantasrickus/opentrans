@@ -41,7 +41,7 @@ class PartiesReference implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\ShipmentPartiesReference")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\OrderChange\ShipmentPartiesReference")
      * @Serializer\SerializedName("SHIPMENT_PARTIES_REFERENCE")
      *
      * @var ShipmentPartiesReference

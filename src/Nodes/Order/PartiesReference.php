@@ -5,10 +5,10 @@ namespace Naugrim\OpenTrans\Nodes\Order;
 use /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\OpenTrans\Nodes\BuyerIdRef;
+use Naugrim\OpenTrans\Nodes\SupplierIdRef;
 use Naugrim\OpenTrans\Nodes\InvoiceRcptIdRef;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
-use Naugrim\OpenTrans\Nodes\ShipmentPartiesReference;
-use Naugrim\OpenTrans\Nodes\SupplierIdRef;
+use Naugrim\OpenTrans\Nodes\OrderChange\ShipmentPartiesReference;
 
 class PartiesReference implements NodeInterface
 {

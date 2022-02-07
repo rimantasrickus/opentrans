@@ -11,7 +11,7 @@ class ShipmentPartiesReference implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\DeliveryIdRef")
-     * @Serializer\SerializedName("INVOICE_RECIPIENT_IDREF")
+     * @Serializer\SerializedName("DELIVERY_IDREF")
      *
      * @var DeliveryIdRef
      */

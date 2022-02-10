@@ -118,7 +118,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $name
-     * @return Party
+     * @return Address
      */
     public function setName(string $name): Address
     {
@@ -136,7 +136,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $name2
-     * @return Party
+     * @return Address
      */
     public function setName2(string $name2): Address
     {
@@ -154,7 +154,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $name3
-     * @return Party
+     * @return Address
      */
     public function setName3(string $name3): Address
     {
@@ -172,7 +172,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $street
-     * @return Party
+     * @return Address
      */
     public function setStreet(string $street): Address
     {
@@ -190,7 +190,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $zip
-     * @return Party
+     * @return Address
      */
     public function setZip(string $zip): Address
     {
@@ -208,7 +208,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $city
-     * @return Party
+     * @return Address
      */
     public function setCity(string $city): Address
     {
@@ -226,7 +226,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $country
-     * @return Party
+     * @return Address
      */
     public function setCountry(string $country): Address
     {
@@ -244,7 +244,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $countryCode
-     * @return Party
+     * @return Address
      */
     public function setCountryCode(string $countryCode): Address
     {
@@ -262,7 +262,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $phone
-     * @return Party
+     * @return Address
      */
     public function setPhone(string $phone): Address
     {
@@ -280,7 +280,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $email
-     * @return Party
+     * @return Address
      */
     public function setEmail(string $email): Address
     {
@@ -298,7 +298,7 @@ class Address implements NodeInterface
 
     /**
      * @param string $packStation
-     * @return Party
+     * @return Address
      */
     public function setPackStation(string $packStation): Address
     {

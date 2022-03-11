@@ -27,7 +27,47 @@ class OrderTest extends TestCase
      */
     public function testOrder(string $file, array $data): void
     {
-        $node = NodeBuilder::fromArray($data, new Order());
+        $node = NodeBuilder::fromArray([
+            'header' => [
+                'info' => [
+                    'id' => 'order-id-1',
+                    'date' => (new DateTimeImmutable('2020-01-27'))->format('Y-m-d'),
+                    'parties' => [
+                        [
+                            'id' => 'org.de.supplier'
+                        ],
+                        [
+                            'id' => 'org.de.buyer'
+                        ],
+                    ],
+                    'partiesReference' => [
+                        'buyerIdRef' => [
+                            'value' => 'org.de.buyer',
+                        ],
+                        'supplierIdRef' => [
+                            'value' => 'org.de.buyer',
+                        ],
+                    ]
+                ]
+            ],
+            'items' => [
+                [
+                    'lineItemId' => 'line-item-id-1',
+                    'productId' => [
+                        'supplierPid' => [
+                            'value' => 'product-number-1'
+                        ]
+                    ],
+                    'quantity' => 10,
+                    'orderUnit' => 'C62',
+                ]
+            ],
+            'summary' => [
+                'totalItemNum' => 1,
+            ]
+        ], new Order());
+
+
         $xml = $this->serializer->serialize($node, 'xml');
 
         $this->assertEquals(file_get_contents(__DIR__ . $file), $xml);

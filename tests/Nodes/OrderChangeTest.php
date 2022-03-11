@@ -28,7 +28,7 @@ class OrderChangeTest extends TestCase
             'header' => [
                 'info' => [
                     'id' => 'order-id-1',
-                    'date' => '2020-01-27',
+                    'date' => (new DateTimeImmutable('2020-01-27'))->format('Y-m-d'),
                     'sequenceId' => 1,
                     'parties' => [
                         [
@@ -68,7 +68,7 @@ class OrderChangeTest extends TestCase
 
         $xml = $this->serializer->serialize($node, 'xml');
 
-        $this->assertEquals(file_get_contents(__DIR__.'/../assets/minimal_valid_orderchange.xml'), $xml);
+        $this->assertEquals(file_get_contents(__DIR__ . '/../assets/minimal_valid_orderchange.xml'), $xml);
 
         $this->assertTrue(SchemaValidator::isValid($xml, '2.1'));
     }

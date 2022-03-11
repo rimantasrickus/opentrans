@@ -28,7 +28,7 @@ class InvoiceTest extends TestCase
             'header' => [
                 'info' => [
                     'id' => 'invoice-id-1',
-                    'date' => '2020-01-27',
+                    'date' => (new DateTimeImmutable('2020-01-27'))->format('Y-m-d'),
                     'parties' => [
                         [
                             'id' => ['value' => 'org.de.issuer', 'type' => 'issuer']
@@ -69,7 +69,7 @@ class InvoiceTest extends TestCase
 
         $xml = $this->serializer->serialize($node, 'xml');
 
-        $this->assertEquals(file_get_contents(__DIR__.'/../assets/minimal_valid_invoice.xml'), $xml);
+        $this->assertEquals(file_get_contents(__DIR__ . '/../assets/minimal_valid_invoice.xml'), $xml);
 
         $this->assertTrue(SchemaValidator::isValid($xml, '2.1'));
     }

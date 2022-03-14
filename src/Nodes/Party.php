@@ -2,30 +2,24 @@
 
 namespace Naugrim\OpenTrans\Nodes;
 
-use /** @noinspection PhpUnusedAliasInspection */
-    JMS\Serializer\Annotation as Serializer;
+use JMS\Serializer\Annotation as Serializer;
+use Naugrim\BMEcat\Nodes\Address;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 
+/**
+ * @Serializer\XmlRoot("PARTY")
+ */
 class Party implements NodeInterface
 {
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\PartyIdRef")
-     * @Serializer\SerializedName("bmecat:PARTY_ID")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\PartyId")
+     * @Serializer\SerializedName("bme:PARTY_ID")
      *
-     * @var PartyIdRef
-     */
-    protected $id;
-    
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("PARTY_ROLE")
-     *
-     * @var string
+     * @var PartyId
      */
     protected $role;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Address")
@@ -36,41 +30,46 @@ class Party implements NodeInterface
     protected $address;
 
     /**
-     * @return PartyIdRef
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\PartyRole")
+     * @Serializer\SerializedName ("PARTY_ROLE")
+     * @var PartyRole
      */
-    public function getId(): PartyIdRef
-    {
-        return $this->id;
-    }
+    protected $role;
 
     /**
-     * @param PartyIdRef $id
-     * @return Party
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\Address")
+     * @Serializer\SerializedName ("ADDRESS")
+     * @var Address
      */
-    public function setId(PartyIdRef $id): Party
-    {
-        $this->id = $id;
-        return $this;
-    }
-    
+    protected $address;
     /**
-     * @return string
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Account")
+     * @Serializer\SerializedName("ACCOUNT")
+     * @var Account
      */
-    public function getRole(): string
+    protected $account;
+
+    /**
+     * @return PartyId
+     */
+    public function getId(): PartyId
     {
         return $this->role;
     }
 
     /**
-     * @param string $id
+     * @param PartyId $id
      * @return Party
      */
-    public function setRole(string $role): Party
+    public function setId(PartyId $id): Party
     {
         $this->role = $role;
         return $this;
     }
-    
+
     /**
      * @return Address
      */
@@ -86,6 +85,60 @@ class Party implements NodeInterface
     public function setAddress(Address $address): Party
     {
         $this->address = $address;
+        return $this;
+    }
+
+    /**
+     * @return PartyRole
+     */
+    public function getRole(): PartyRole
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param PartyRole $role
+     * @return Party
+     */
+    public function setRole(PartyRole $role): Party
+    {
+        $this->role = $role;
+        return $this;
+    }
+
+    /**
+     * @return Address
+     */
+    public function getAddress(): Address
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param Address $address
+     * @return Party
+     */
+    public function setAddress(Address $address): Party
+    {
+        $this->address = $address;
+        return $this;
+    }
+
+    /**
+     * @return Account
+     */
+    public function getAccount(): Account
+    {
+        return $this->account;
+    }
+
+    /**
+     * @param Account $account
+     * @return Party
+     */
+    public function setAccount(Account $account): Party
+    {
+        $this->account = $account;
         return $this;
     }
 }

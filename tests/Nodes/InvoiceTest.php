@@ -31,10 +31,10 @@ class InvoiceTest extends TestCase
                     'date' => '2020-01-27',
                     'parties' => [
                         [
-                            'id' => 'org.de.issuer'
+                            'id' => ['value' => 'org.de.issuer', 'type' => 'issuer']
                         ],
                         [
-                            'id' => 'org.de.rcpt'
+                            'id' => ['value' => 'org.de.rcpt', 'type' => 'buyer']
                         ],
                     ],
                     'issuerIdRef' => 'org.de.issuer',

@@ -31,7 +31,7 @@ class OrderTest extends TestCase
                     'date' => '2020-01-27',
                     'parties' => [
                         [
-                            'id' => ['value' => 'org.de.supplier', 'type' => 'supplier']
+                            'id' => ['value' => 'org.de.supplier']
                         ],
                         [
                             'id' => ['value' => 'org.de.buyer', 'type' => 'buyer']

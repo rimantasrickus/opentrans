@@ -47,10 +47,11 @@ class OrderTest extends TestCase
                             'date' => (new DateTimeImmutable('2020-01-27'))->format('Y-m-d'),
                             'parties' => [
                                 [
-                                    'id' => 'org.de.supplier'
+                                    'id' => ['type' => 'supplier_specific', 'value' => 'supplier ID'],
+                                    'role' => ['role' => 'supplier']
                                 ],
                                 [
-                                    'id' => 'org.de.buyer'
+                                    'id' => ['value' => 'org.de.buyer', 'type' => 'buyer']
                                 ],
                             ],
                             'partiesReference' => [
@@ -88,54 +89,6 @@ class OrderTest extends TestCase
                     ]
                 ]
             ],
-            [
-                'file' => '/../assets/minimal_valid_order.xml',
-                'data' => [
-                    'header' => [
-                        'info' => [
-                            'id' => 'order-id-1',
-                            'date' => (new DateTimeImmutable('2020-01-27'))->format('Y-m-d'),
-                            'parties' => [
-                                [
-                                    'id' => 'org.de.supplier'
-                                ],
-                                [
-                                    'id' => 'org.de.buyer'
-                                ],
-                            ],
-                            'partiesReference' => [
-                                'buyerIdRef' => [
-                                    'value' => 'org.de.buyer',
-                                ],
-                                'supplierIdRef' => [
-                                    'value' => 'org.de.buyer',
-                                ],
-                            ]
-                        ]
-                    ],
-                    'items' => [
-                        [
-                            'lineItemId' => 'line-item-id-1',
-                            'productId' => [
-                                'supplierPid' => [
-                                    'value' => 'product-number-1'
-                                ]
-                            ],
-                            'quantity' => 10,
-                            'orderUnit' => 'C62',
-                        ]
-                    ],
-                    'summary' => [
-                        'totalItemNum' => 1,
-                    ]
-                ]
-            ]
-        ];
-    }
-
-    public function provideOrderData(): array
-    {
-        return [
             [
                 'file' => '/../assets/minimal_valid_order.xml',
                 'data' => [

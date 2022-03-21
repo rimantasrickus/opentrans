@@ -1,308 +1,106 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Naugrim\OpenTrans\Nodes;
 
-use /** @noinspection PhpUnusedAliasInspection */
-    JMS\Serializer\Annotation as Serializer;
-use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
+use JMS\Serializer\Annotation as Serializer;
 
-class Address implements NodeInterface
+class Address extends \Naugrim\BMEcat\Nodes\Address
 {
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:NAME")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:NAME")
      */
     protected $name;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:NAME2")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:NAME2")
      */
     protected $name2;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:NAME3")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:NAME3")
      */
     protected $name3;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:STREET")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:DEPARTMENT")
+     */
+    protected $department;
+
+    /**
+     * @Serializer\SerializedName("CONTACT_DETAILS")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\ContactDetails")
+     */
+    protected $contactDetails;
+
+    /**
+     * @Serializer\SerializedName("bme:STREET")
      */
     protected $street;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:ZIP")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:ZIP")
      */
     protected $zip;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:CITY")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:BOXNO")
+     */
+    protected $boxno;
+
+    /**
+     * @Serializer\SerializedName("bme:ZIPBOX")
+     */
+    protected $zipbox;
+
+    /**
+     * @Serializer\SerializedName("bme:CITY")
      */
     protected $city;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:COUNTRY")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:COUNTRY")
      */
     protected $country;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:COUNTRY_CODED")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:COUNTRY_CODED")
      */
-    protected $countryCode;
-    
+    protected $countryCoded;
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:PHONE")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:VAT_ID")
+     */
+    protected $vatId;
+
+    /**
+     * @Serializer\SerializedName("bme:PHONE")
      */
     protected $phone;
-    
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:EMAIL")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:FAX")
+     */
+    protected $fax;
+
+    /**
+     * @Serializer\SerializedName("bme:EMAIL")
      */
     protected $email;
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:ADDRESS_REMARKS")
-     *
-     * @var string
+     * @Serializer\SerializedName("bme:PUBLIC_KEY")
      */
-    protected $packStation;
- 
+    protected $publicKey;
 
     /**
-     * @return string|null
+     * @Serializer\SerializedName("bme:URL")
      */
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
+    protected $url;
 
     /**
-     * @param string $name
-     * @return Address
+     * @Serializer\SerializedName("bme:ADDRESS_REMARKS")
      */
-    public function setName(string $name): Address
-    {
-        $this->name = $name;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getName2(): string
-    {
-        return $this->name2;
-    }
-
-    /**
-     * @param string $name2
-     * @return Address
-     */
-    public function setName2(string $name2): Address
-    {
-        $this->name2 = $name2;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName3(): string
-    {
-        return $this->name3;
-    }
-
-    /**
-     * @param string $name3
-     * @return Address
-     */
-    public function setName3(string $name3): Address
-    {
-        $this->name3 = $name3;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getStreet(): string
-    {
-        return $this->street;
-    }
-
-    /**
-     * @param string $street
-     * @return Address
-     */
-    public function setStreet(string $street): Address
-    {
-        $this->street = $street;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getZip(): string
-    {
-        return $this->zip;
-    }
-
-    /**
-     * @param string $zip
-     * @return Address
-     */
-    public function setZip(string $zip): Address
-    {
-        $this->zip = $zip;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCity(): string
-    {
-        return $this->city;
-    }
-
-    /**
-     * @param string $city
-     * @return Address
-     */
-    public function setCity(string $city): Address
-    {
-        $this->city = $city;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getCountry(): string
-    {
-        return $this->country;
-    }
-
-    /**
-     * @param string $country
-     * @return Address
-     */
-    public function setCountry(string $country): Address
-    {
-        $this->country = $country;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getCountryCode(): string
-    {
-        return $this->countryCode;
-    }
-
-    /**
-     * @param string $countryCode
-     * @return Address
-     */
-    public function setCountryCode(string $countryCode): Address
-    {
-        $this->countryCode = $countryCode;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getPhone(): string
-    {
-        return $this->phone;
-    }
-
-    /**
-     * @param string $phone
-     * @return Address
-     */
-    public function setPhone(string $phone): Address
-    {
-        $this->phone = $phone;
-        return $this;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     * @return Address
-     */
-    public function setEmail(string $email): Address
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPackStation(): string
-    {
-        return $this->packStation;
-    }
-
-    /**
-     * @param string $packStation
-     * @return Address
-     */
-    public function setPackStation(string $packStation): Address
-    {
-        $this->packStation = $packStation;
-        return $this;
-    }
+    protected $addressRemarks;
 }

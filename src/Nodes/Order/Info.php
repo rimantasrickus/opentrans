@@ -7,6 +7,7 @@ use Naugrim\BMEcat\Builder\NodeBuilder;
 use Naugrim\BMEcat\Exception\InvalidSetterException;
 use Naugrim\BMEcat\Exception\UnknownKeyException;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
+use Naugrim\OpenTrans\Nodes\DeliveryDate;
 use Naugrim\OpenTrans\Nodes\Party;
 
 class Info implements NodeInterface
@@ -29,6 +30,14 @@ class Info implements NodeInterface
      */
     protected $date;
 
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\DeliveryDate")
+     * @Serializer\SerializedName("DELIVERY_DATE")
+     *
+     * @var DeliveryDate
+     */
+    protected $deliveryDate;
 
     /**
      *
@@ -52,31 +61,12 @@ class Info implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:CURRENCY")
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("PARTIAL_SHIPMENT_ALLOWED")
      *
-     * @var string
+     * @var boolean
      */
-    protected $currency;
-    
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Order\Payment")
-     * @Serializer\SerializedName("PAYMENT")
-     *
-     * @var Payment
-     */
-    protected $payment;
-
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Order\Remarks>")
-     * @Serializer\SerializedName("REMARKS")
-     * @Serializer\XmlList(inline = true, entry = "REMARKS")
-     *
-     * @var Remarks[]
-     */
-    protected $remarks;
+    protected $partialShipmentAllowed;
 
     /**
      * @return string
@@ -111,6 +101,17 @@ class Info implements NodeInterface
     public function setDate(string $date): Info
     {
         $this->date = $date;
+        return $this;
+    }
+
+    public function getDeliveryDate(): DeliveryDate
+    {
+        return $this->deliveryDate;
+    }
+
+    public function setDeliveryDate(DeliveryDate $deliveryDate): self
+    {
+        $this->deliveryDate = $deliveryDate;
         return $this;
     }
 
@@ -167,74 +168,17 @@ class Info implements NodeInterface
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCurrency(): string
+    public function setPartialShipmentAllowed(bool $partialShipmentAllowed): self
     {
-        return $this->currency;
-    }
-
-    /**
-     * @param string $currency
-     * @return Info
-     */
-    public function setCurrency(string $currency): Info
-    {
-        $this->currency = $currency;
-        return $this;
-    }
-    
-    /**
-     * @return Payment
-     */
-    public function getPayment(): Payment
-    {
-        return $this->payment;
-    }
-
-    /**
-     * @param Payment $payment
-     * @return Info
-     */
-    public function setPayment(Payment $payment): Info
-    {
-        $this->payment = $payment;
+        $this->partialShipmentAllowed = $partialShipmentAllowed;
         return $this;
     }
 
     /**
-     * @return Remarks[]
+     * @return bool
      */
-    public function getRemarks(): array
+    public function isPartialShipmentAllowed(): bool
     {
-        return $this->remarks;
-    }
-
-    /**
-     * @param Remarks[] $remarks
-     * @return Info
-     * @throws InvalidSetterException
-     * @throws UnknownKeyException
-     */
-    public function setRemarks(array $remarks): Info
-    {
-        foreach ($remarks as $remark) {
-            if (!$remark instanceof Remarks) {
-                $remark = NodeBuilder::fromArray($remark, new Remarks());
-            }
-            $this->addRemark($remark);
-        }
-        return $this;
-    }
-
-    /**
-     * @param Remarks $remark
-     * @return $this
-     */
-    public function addRemark(Remarks $remark)
-    {
-        $this->remarks[] = $remark;
-        return $this;
+        return $this->partialShipmentAllowed;
     }
 }

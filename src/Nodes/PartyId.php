@@ -24,4 +24,5 @@ class PartyId implements NodeInterface
     public const TYPE_BUYER = 'buyer';
     public const TYPE_ISSUER = 'issuer';
     public const TYPE_SUPPLIER = 'supplier';
+    public const TYPE_CHECK24 = 'check24';
 }

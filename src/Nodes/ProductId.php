@@ -13,8 +13,8 @@ class ProductId implements NodeInterface
 {
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierPid")
-     * @Serializer\SerializedName("bmecat:SUPPLIER_PID")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierPid")
+     * @Serializer\SerializedName("bme:SUPPLIER_PID")
      *
      * @var SupplierPid
      */
@@ -22,8 +22,8 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\SupplierIdRef")
-     * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierIdRef")
+     * @Serializer\SerializedName("bme:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
      */
@@ -58,8 +58,8 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\InternationalPid")
-     * @Serializer\SerializedName("bmecat:INTERNATIONAL_PID")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\InternationalPid")
+     * @Serializer\SerializedName("bme:INTERNATIONAL_PID")
      *
      * @var InternationalPid
      */
@@ -67,8 +67,8 @@ class ProductId implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\BuyerPid")
-     * @Serializer\SerializedName("bmecat:BUYER_PID")
+     * @Serializer\Type("Naugrim\BMEcat\Nodes\BuyerPid")
+     * @Serializer\SerializedName("bme:BUYER_PID")
      *
      * @var BuyerPid
      */
@@ -77,7 +77,7 @@ class ProductId implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:DESCRIPTION_SHORT")
+     * @Serializer\SerializedName("bme:DESCRIPTION_SHORT")
      *
      * @var string
      */
@@ -86,7 +86,7 @@ class ProductId implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:DESCRIPTION_LONG")
+     * @Serializer\SerializedName("bme:DESCRIPTION_LONG")
      *
      * @var string
      */
@@ -95,7 +95,7 @@ class ProductId implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:PRODUCT_TYPE")
+     * @Serializer\SerializedName("bme:PRODUCT_TYPE")
      *
      * @var string
      */

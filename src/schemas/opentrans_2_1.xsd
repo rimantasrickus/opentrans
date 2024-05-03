@@ -23,8 +23,8 @@ Fraunhofer IAO und Universität Duisburg-Essen BLI gewähren Ihnen hiermit das d
 
 
 -->
-<xsd:schema xmlns="http://www.opentrans.org/XMLSchema/2.1" xmlns:bmecat="https://www.bme.de/initiativen/bmecat/bmecat-2005" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsig="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opentrans.org/XMLSchema/2.1" elementFormDefault="qualified">
-	<xsd:import namespace="https://www.bme.de/initiativen/bmecat/bmecat-2005" schemaLocation="bmecat_2005.xsd"/>
+<xsd:schema xmlns="http://www.opentrans.org/XMLSchema/2.1" xmlns:bmecat="http://www.bmecat.org/bmecat/2005" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsig="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opentrans.org/XMLSchema/2.1" elementFormDefault="qualified">
+	<xsd:import namespace="http://www.bmecat.org/bmecat/2005" schemaLocation="bmecat_2005.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2005/05/xmlmime" schemaLocation="xmlmime.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
 	<xsd:element name="OPENTRANS">

@@ -60,16 +60,6 @@ class Info implements NodeInterface
     protected $partiesReference;
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\OrderChange\Remarks>")
-     * @Serializer\SerializedName("REMARKS")
-     * @Serializer\XmlList(inline = true, entry = "REMARKS")
-     *
-     * @var Remarks[]
-     */
-    protected $remarks;
-
-    /**
      * @return string
      */
     public function getId(): string
@@ -173,41 +163,6 @@ class Info implements NodeInterface
     public function setPartiesReference(PartiesReference $partiesReference): Info
     {
         $this->partiesReference = $partiesReference;
-        return $this;
-    }
-
-    /**
-     * @return Remarks[]
-     */
-    public function getRemarks(): array
-    {
-        return $this->remarks;
-    }
-
-    /**
-     * @param Remarks[] $remarks
-     * @return Info
-     * @throws InvalidSetterException
-     * @throws UnknownKeyException
-     */
-    public function setRemarks(array $remarks): Info
-    {
-        foreach ($remarks as $remark) {
-            if (!$remark instanceof Remarks) {
-                $remark = NodeBuilder::fromArray($remark, new Remarks());
-            }
-            $this->addRemark($remark);
-        }
-        return $this;
-    }
-
-    /**
-     * @param Remarks $remark
-     * @return $this
-     */
-    public function addRemark(Remarks $remark)
-    {
-        $this->remarks[] = $remark;
         return $this;
     }
 }

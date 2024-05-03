@@ -14,7 +14,7 @@ class PartiesReference implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\BuyerIdRef")
-     * @Serializer\SerializedName("bmecat:BUYER_IDREF")
+     * @Serializer\SerializedName("bme:BUYER_IDREF")
      *
      * @var BuyerIdRef
      */
@@ -23,7 +23,7 @@ class PartiesReference implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierIdRef")
-     * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
+     * @Serializer\SerializedName("bme:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
      */
@@ -40,7 +40,7 @@ class PartiesReference implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\OpenTrans\Nodes\OrderChange\ShipmentPartiesReference")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\ShipmentPartiesReference")
      * @Serializer\SerializedName("SHIPMENT_PARTIES_REFERENCE")
      *
      * @var ShipmentPartiesReference

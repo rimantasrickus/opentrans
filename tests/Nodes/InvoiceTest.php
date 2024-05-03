@@ -42,7 +42,7 @@ class InvoiceTest extends TestCase
     {
         return [
             [
-                'file' => __DIR__ . '/../assets/minimal_valid_invoice.xml',
+                'file' => __DIR__.'/../assets/minimal_valid_invoice.xml',
                 'data' => [
                     'header' => [
                         'info' => [
@@ -86,7 +86,7 @@ class InvoiceTest extends TestCase
                 ],
             ],
             [
-                'file' => __DIR__ . '/../assets/minimal_valid_invoice_with_delivery_date.xml',
+                'file' => __DIR__.'/../assets/minimal_valid_invoice_with_delivery_date.xml',
                 'data' => [
                     'header' => [
                         'info' => [

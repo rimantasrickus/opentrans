@@ -43,7 +43,7 @@ class Item implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:ORDER_UNIT")
+     * @Serializer\SerializedName("bme:ORDER_UNIT")
      *
      * @var string
      */

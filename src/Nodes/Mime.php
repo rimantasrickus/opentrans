@@ -15,7 +15,7 @@ class Mime implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:MIME_TYPE")
+     * @Serializer\SerializedName("bme:MIME_TYPE")
      *
      * @var string
      */
@@ -24,7 +24,7 @@ class Mime implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:MIME_SOURCE")
+     * @Serializer\SerializedName("bme:MIME_SOURCE")
      *
      * @var string
      */
@@ -55,7 +55,7 @@ class Mime implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:MIME_DESCR")
+     * @Serializer\SerializedName("bme:MIME_DESCR")
      *
      * @var string
      */

@@ -71,7 +71,7 @@ class Info implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bmecat:CURRENCY")
+     * @Serializer\SerializedName("bme:CURRENCY")
      *
      * @var string
      */

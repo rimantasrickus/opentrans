@@ -83,6 +83,16 @@ class Info implements NodeInterface
     protected $payment;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Order\Remarks>")
+     * @Serializer\SerializedName("REMARKS")
+     * @Serializer\XmlList(inline = true, entry = "REMARKS")
+     *
+     * @var Remarks[]
+     */
+    protected $remarks;
+
+    /**
      * @see HasUdxItems::$udxItem
      * @Serializer\SerializedName("HEADER_UDX")
      * @var UdxAggregate
@@ -211,6 +221,41 @@ class Info implements NodeInterface
     public function setPayment(Payment $payment): Info
     {
         $this->payment = $payment;
+        return $this;
+    }
+
+    /**
+     * @return Remarks[]
+     */
+    public function getRemarks(): array
+    {
+        return $this->remarks;
+    }
+
+    /**
+     * @param Remarks[] $remarks
+     * @return Info
+     * @throws InvalidSetterException
+     * @throws UnknownKeyException
+     */
+    public function setRemarks(array $remarks): Info
+    {
+        foreach ($remarks as $remark) {
+            if (!$remark instanceof Remarks) {
+                $remark = NodeBuilder::fromArray($remark, new Remarks());
+            }
+            $this->addRemark($remark);
+        }
+        return $this;
+    }
+
+    /**
+     * @param Remarks $remark
+     * @return $this
+     */
+    public function addRemark(Remarks $remark)
+    {
+        $this->remarks[] = $remark;
         return $this;
     }
 }

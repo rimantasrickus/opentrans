@@ -32,15 +32,6 @@ class Order implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\XmlAttribute
-     *
-     * @var string
-     */
-    protected $version = '2.1';
-
-    /**
-     * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Order\Header")
      * @Serializer\SerializedName("ORDER_HEADER")
      *
@@ -69,7 +60,7 @@ class Order implements NodeInterface
     protected $summary;
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getType()
     {
@@ -77,30 +68,12 @@ class Order implements NodeInterface
     }
 
     /**
-     * @param string $type
+     * @param mixed $type
      * @return Order
      */
     public function setType($type)
     {
         $this->type = $type;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getVersion()
-    {
-        return $this->version;
-    }
-
-    /**
-     * @param string $version
-     * @return Order
-     */
-    public function setVersion($version)
-    {
-        $this->version = $version;
         return $this;
     }
 

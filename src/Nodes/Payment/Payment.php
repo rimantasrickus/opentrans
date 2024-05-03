@@ -61,7 +61,7 @@ class Payment implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\BMEcat\Nodes\Payment\PaymentTerms")
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Payment\PaymentTerms")
      * @Serializer\SerializedName("PAYMENT_TERMS")
      *
      * @var PaymentTerms
@@ -98,8 +98,7 @@ class Payment implements NodeInterface
         string $bankName,
         string $bic,
         string $country
-    ): Payment
-    {
+    ): Payment {
         $bankAccount = new BankAccount();
         $bankAccount->setType(BankAccount::TYPE_IBAN);
         $bankAccount->setValue($iban);

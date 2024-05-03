@@ -2,7 +2,8 @@
 
 namespace Naugrim\OpenTrans\Nodes;
 
-use /** @noinspection PhpUnusedAliasInspection */
+use
+    /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\BMEcat\Builder\NodeBuilder;
@@ -21,6 +22,14 @@ use Naugrim\OpenTrans\Nodes\DispatchNotification\Summary;
 class DispatchNotification implements NodeInterface
 {
     use IsRootNode;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\XmlAttribute
+     *
+     * @var string
+     */
+    protected $type = 'standard';
 
     /**
      * @Serializer\Expose
@@ -116,7 +125,7 @@ class DispatchNotification implements NodeInterface
      * @param Item $item
      * @return $this
      */
-    public function addItem(Item $item) : DispatchNotification
+    public function addItem(Item $item): DispatchNotification
     {
         $this->items[] = $item;
         return $this;

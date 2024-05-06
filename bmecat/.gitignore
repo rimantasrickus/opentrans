@@ -1,0 +1,10 @@
+.idea
+.tmp
+vendor
+composer.phar
+/.phpunit.result.cache
+/tools/php-cs-fixer/vendor
+/.php-cs-fixer.cache
+/tools/phpcompatibility/vendor
+/tools/rector/vendor
+/composer.lock

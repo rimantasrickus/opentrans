@@ -33,4 +33,22 @@ class ShipmentPartiesReference implements NodeInterface
      * @var DelivererIdRef|null
      */
     protected $delivererIdRef;
+
+    /**
+     * @return DeliveryIdRef
+     */
+    public function getDeliveryIdRef(): DeliveryIdRef
+    {
+        return $this->deliveryIdRef;
+    }
+
+    /**
+     * @param DeliveryIdRef $deliveryIdRef
+     * @return ShipmentPartiesReference
+     */
+    public function setDeliveryIdRef(DeliveryIdRef $deliveryIdRef): ShipmentPartiesReference
+    {
+        $this->deliveryIdRef = $deliveryIdRef;
+        return $this;
+    }
 }

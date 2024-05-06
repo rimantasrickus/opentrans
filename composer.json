@@ -20,7 +20,7 @@
     "autoload": {
         "psr-4": {
             "Naugrim\\OpenTrans\\Tests\\": "tests/",
-            "Naugrim\\OpenTrans\\": "src/",
+            "Naugrim\\OpenTrans\\": "src/"
         }
     },
     "require-dev": {

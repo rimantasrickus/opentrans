@@ -1,6 +1,6 @@
 <?php
 
-namespace Naugrim\OpenTrans\Nodes\Order;
+namespace Naugrim\OpenTrans\Nodes;
 
 use JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;

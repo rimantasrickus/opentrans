@@ -2,16 +2,17 @@
 
 namespace Naugrim\OpenTrans\Nodes\Order;
 
-use JMS\Serializer\Annotation as Serializer;
+use Naugrim\OpenTrans\Nodes\Party;
+use Naugrim\OpenTrans\Nodes\Remarks;
 use Naugrim\BMEcat\Builder\NodeBuilder;
-use Naugrim\BMEcat\Exception\InvalidSetterException;
+use Naugrim\OpenTrans\Nodes\DeliveryDate;
+use Naugrim\OpenTrans\Nodes\UdxAggregate;
+use JMS\Serializer\Annotation as Serializer;
+use Naugrim\OpenTrans\Nodes\Payment\Payment;
 use Naugrim\BMEcat\Exception\UnknownKeyException;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\OpenTrans\Nodes\Concerns\HasUdxItems;
-use Naugrim\OpenTrans\Nodes\DeliveryDate;
-use Naugrim\OpenTrans\Nodes\Party;
-use Naugrim\OpenTrans\Nodes\Payment\Payment;
-use Naugrim\OpenTrans\Nodes\UdxAggregate;
+use Naugrim\BMEcat\Exception\InvalidSetterException;
 
 class Info implements NodeInterface
 {
@@ -93,7 +94,7 @@ class Info implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Order\Remarks>")
+     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Remarks>")
      * @Serializer\SerializedName("REMARKS")
      * @Serializer\XmlList(inline = true, entry = "REMARKS")
      *

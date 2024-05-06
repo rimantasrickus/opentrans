@@ -2,13 +2,14 @@
 
 namespace Naugrim\OpenTrans\Nodes\OrderChange;
 
-use JMS\Serializer\Annotation as Serializer;
+use Naugrim\OpenTrans\Nodes\Party;
+use Naugrim\OpenTrans\Nodes\Remarks;
 use Naugrim\BMEcat\Builder\NodeBuilder;
-use Naugrim\BMEcat\Exception\InvalidSetterException;
+use JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Exception\UnknownKeyException;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\OpenTrans\Nodes\Order\PartiesReference;
-use Naugrim\OpenTrans\Nodes\Party;
+use Naugrim\BMEcat\Exception\InvalidSetterException;
 
 class Info implements NodeInterface
 {
@@ -58,6 +59,16 @@ class Info implements NodeInterface
      * @var PartiesReference
      */
     protected $partiesReference;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Remarks>")
+     * @Serializer\SerializedName("REMARKS")
+     * @Serializer\XmlList(inline = true, entry = "REMARKS")
+     *
+     * @var Remarks[]
+     */
+    protected $remarks;
 
     /**
      * @return string
@@ -163,6 +174,41 @@ class Info implements NodeInterface
     public function setPartiesReference(PartiesReference $partiesReference): Info
     {
         $this->partiesReference = $partiesReference;
+        return $this;
+    }
+
+    /**
+     * @return Remarks[]
+     */
+    public function getRemarks(): array
+    {
+        return $this->remarks;
+    }
+
+    /**
+     * @param Remarks[] $remarks
+     * @return Info
+     * @throws InvalidSetterException
+     * @throws UnknownKeyException
+     */
+    public function setRemarks(array $remarks): Info
+    {
+        foreach ($remarks as $remark) {
+            if (!$remark instanceof Remarks) {
+                $remark = NodeBuilder::fromArray($remark, new Remarks());
+            }
+            $this->addRemark($remark);
+        }
+        return $this;
+    }
+
+    /**
+     * @param Remarks $remark
+     * @return $this
+     */
+    public function addRemark(Remarks $remark)
+    {
+        $this->remarks[] = $remark;
         return $this;
     }
 }

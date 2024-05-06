@@ -14,13 +14,15 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "jms/serializer": "^3.4",
+        "naugrim/bmecat": "^1.0",
         "doctrine/annotations": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "Naugrim\\OpenTrans\\Tests\\": "tests/",
             "Naugrim\\OpenTrans\\": "src/",
-            "Naugrim\\BMEcat\\": "bmecat/src/"
+            "Naugrim\\BMEcat\\": "fixes/Naugrim/BMEcat",
+            "JMS\\Serializer\\": "fixes/JMS/Serializer"
         }
     },
     "require-dev": {

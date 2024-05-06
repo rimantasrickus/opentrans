@@ -25,14 +25,6 @@ class DispatchNotification implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\XmlAttribute
-     *
-     * @var string
-     */
-    protected $type = 'standard';
-
-    /**
-     * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\Header")
      * @Serializer\SerializedName("DISPATCHNOTIFICATION_HEADER")
      *
@@ -59,24 +51,6 @@ class DispatchNotification implements NodeInterface
      * @var Summary
      */
     protected $summary;
-
-    /**
-     * @return mixed
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param mixed $type
-     * @return DispatchNotification
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-        return $this;
-    }
 
     /**
      * @return Header

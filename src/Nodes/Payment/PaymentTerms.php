@@ -3,6 +3,7 @@
 namespace Naugrim\OpenTrans\Nodes\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
+use Naugrim\OpenTrans\Nodes\Order\PaymentTime;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 
 class PaymentTerms implements NodeInterface
@@ -17,10 +18,19 @@ class PaymentTerms implements NodeInterface
 
     /**
      * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Order\PaymentTime")
+     * @Serializer\SerializedName("TIME_FOR_PAYMENT")
+     *
+     * @var PaymentTime
+     */
+    protected $paymentTime;
+
+    /**
+     * @Serializer\Expose
      * @Serializer\Type("string")
      * @Serializer\SerializedName("VALUE_DATE")
      *
-     * @var string|null
+     * @var string
      */
     private $valueDate;
 
@@ -37,18 +47,37 @@ class PaymentTerms implements NodeInterface
 
         return $this;
     }
+
     public function addTerm(PaymentTerm $term): PaymentTerms
     {
         $this->terms[] = $term;
         return $this;
     }
 
-    public function getValueDate(): ?string
+    /**
+     * @return PaymentTime
+     */
+    public function getPaymentTime(): PaymentTime
+    {
+        return $this->paymentTime;
+    }
+
+    /**
+     * @param PaymentTime $paymentTime
+     * @return Item
+     */
+    public function setPaymentTime(PaymentTime $paymentTime): PaymentTerms
+    {
+        $this->paymentTime = $paymentTime;
+        return $this;
+    }
+
+    public function getValueDate(): string
     {
         return $this->valueDate;
     }
 
-    public function setValueDate(?string $valueDate): PaymentTerms
+    public function setValueDate(string $valueDate): PaymentTerms
     {
         $this->valueDate = $valueDate;
         return $this;

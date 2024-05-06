@@ -2,7 +2,9 @@
 
 namespace Naugrim\OpenTrans\Nodes\Product;
 
-use JMS\Serializer\Annotation as Serializer;
+use
+    /** @noinspection PhpUnusedAliasInspection */
+    JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 
 class PriceFix implements NodeInterface
@@ -15,6 +17,15 @@ class PriceFix implements NodeInterface
      * @var float
      */
     protected $amount;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Product\TaxFix")
+     * @Serializer\SerializedName("TAX_DETAILS_FIX")
+     *
+     * @var TaxFix
+     */
+    protected $taxFix;
 
     /**
      * @return float
@@ -31,6 +42,24 @@ class PriceFix implements NodeInterface
     public function setAmount(float $amount): PriceFix
     {
         $this->amount = $amount;
+        return $this;
+    }
+
+    /**
+     * @return TaxFix
+     */
+    public function getTaxFix(): TaxFix
+    {
+        return $this->taxFix;
+    }
+
+    /**
+     * @param TaxFix $taxFix
+     * @return PriceFix
+     */
+    public function setTaxFix(TaxFix $taxFix): PriceFix
+    {
+        $this->taxFix = $taxFix;
         return $this;
     }
 }

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ORDER xmlns="http://www.opentrans.org/XMLSchema/2.1" type="standard" xmlns:bme="http://www.bmecat.org/bmecat/2005" version="2.1">
+<ORDER xmlns="http://www.opentrans.org/XMLSchema/2.1" type="standard" xmlns:bmecat="http://www.bmecat.org/bmecat/2005" version="2.1">
   <ORDER_HEADER>
     <ORDER_INFO>
       <ORDER_ID><![CDATA[order-id-1]]></ORDER_ID>
       <ORDER_DATE><![CDATA[2020-01-27]]></ORDER_DATE>
       <PARTIES>
         <PARTY>
-          <bme:PARTY_ID><![CDATA[org.de.supplier]]></bme:PARTY_ID>
+          <bmecat:PARTY_ID><![CDATA[org.de.supplier]]></bmecat:PARTY_ID>
         </PARTY>
         <PARTY>
-          <bme:PARTY_ID type="buyer"><![CDATA[org.de.buyer]]></bme:PARTY_ID>
+          <bmecat:PARTY_ID type="buyer"><![CDATA[org.de.buyer]]></bmecat:PARTY_ID>
           <ADDRESS>
-            <bme:NAME><![CDATA[Someone]]></bme:NAME>
-            <bme:NAME2><![CDATA[Else]]></bme:NAME2>
+            <bmecat:NAME><![CDATA[Someone]]></bmecat:NAME>
+            <bmecat:NAME2><![CDATA[Else]]></bmecat:NAME2>
             <CONTACT_DETAILS>
-              <bme:CONTACT_ID><![CDATA[1234-098765]]></bme:CONTACT_ID>
-              <bme:CONTACT_NAME><![CDATA[Doe]]></bme:CONTACT_NAME>
-              <bme:FIRST_NAME><![CDATA[John]]></bme:FIRST_NAME>
-              <bme:TITLE><![CDATA[Miss]]></bme:TITLE>
-              <bme:ACADEMIC_TITLE><![CDATA[Dr]]></bme:ACADEMIC_TITLE>
-              <bme:PHONE type="mobile"><![CDATA[+49 321 654987]]></bme:PHONE>
+              <bmecat:CONTACT_ID><![CDATA[1234-098765]]></bmecat:CONTACT_ID>
+              <bmecat:CONTACT_NAME><![CDATA[Doe]]></bmecat:CONTACT_NAME>
+              <bmecat:FIRST_NAME><![CDATA[John]]></bmecat:FIRST_NAME>
+              <bmecat:TITLE><![CDATA[Miss]]></bmecat:TITLE>
+              <bmecat:ACADEMIC_TITLE><![CDATA[Dr]]></bmecat:ACADEMIC_TITLE>
+              <bmecat:PHONE type="mobile"><![CDATA[+49 321 654987]]></bmecat:PHONE>
             </CONTACT_DETAILS>
-            <bme:STREET><![CDATA[Some street]]></bme:STREET>
-            <bme:ZIP><![CDATA[98765]]></bme:ZIP>
-            <bme:CITY><![CDATA[Somewhere]]></bme:CITY>
-            <bme:COUNTRY><![CDATA[Germany]]></bme:COUNTRY>
-            <bme:COUNTRY_CODED><![CDATA[DE]]></bme:COUNTRY_CODED>
-            <bme:PHONE><![CDATA[+49 123 456789 - 0]]></bme:PHONE>
+            <bmecat:STREET><![CDATA[Some street]]></bmecat:STREET>
+            <bmecat:ZIP><![CDATA[98765]]></bmecat:ZIP>
+            <bmecat:CITY><![CDATA[Somewhere]]></bmecat:CITY>
+            <bmecat:COUNTRY><![CDATA[Germany]]></bmecat:COUNTRY>
+            <bmecat:COUNTRY_CODED><![CDATA[DE]]></bmecat:COUNTRY_CODED>
+            <bmecat:PHONE><![CDATA[+49 123 456789 - 0]]></bmecat:PHONE>
           </ADDRESS>
         </PARTY>
       </PARTIES>
       <ORDER_PARTIES_REFERENCE>
-        <bme:BUYER_IDREF><![CDATA[org.de.buyer]]></bme:BUYER_IDREF>
-        <bme:SUPPLIER_IDREF><![CDATA[org.de.buyer]]></bme:SUPPLIER_IDREF>
+        <bmecat:BUYER_IDREF><![CDATA[org.de.buyer]]></bmecat:BUYER_IDREF>
+        <bmecat:SUPPLIER_IDREF><![CDATA[org.de.buyer]]></bmecat:SUPPLIER_IDREF>
       </ORDER_PARTIES_REFERENCE>
     </ORDER_INFO>
   </ORDER_HEADER>
@@ -40,10 +40,10 @@
     <ORDER_ITEM>
       <LINE_ITEM_ID><![CDATA[line-item-id-1]]></LINE_ITEM_ID>
       <PRODUCT_ID>
-        <bme:SUPPLIER_PID><![CDATA[product-number-1]]></bme:SUPPLIER_PID>
+        <bmecat:SUPPLIER_PID><![CDATA[product-number-1]]></bmecat:SUPPLIER_PID>
       </PRODUCT_ID>
       <QUANTITY>10.0</QUANTITY>
-      <bme:ORDER_UNIT><![CDATA[C62]]></bme:ORDER_UNIT>
+      <bmecat:ORDER_UNIT><![CDATA[C62]]></bmecat:ORDER_UNIT>
     </ORDER_ITEM>
   </ORDER_ITEM_LIST>
   <ORDER_SUMMARY>

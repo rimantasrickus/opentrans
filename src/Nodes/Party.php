@@ -13,7 +13,7 @@ class Party implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\PartyId")
-     * @Serializer\SerializedName("bme:PARTY_ID")
+     * @Serializer\SerializedName("bmecat:PARTY_ID")
      *
      * @var PartyId
      */

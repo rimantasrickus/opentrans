@@ -14,7 +14,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:NAME")
+     * @Serializer\SerializedName("bmecat:NAME")
      *
      * @var string
      */
@@ -23,7 +23,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:NAME2")
+     * @Serializer\SerializedName("bmecat:NAME2")
      *
      * @var string
      */
@@ -32,7 +32,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:NAME3")
+     * @Serializer\SerializedName("bmecat:NAME3")
      *
      * @var string
      */
@@ -41,7 +41,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:DEPARTMENT")
+     * @Serializer\SerializedName("bmecat:DEPARTMENT")
      *
      * @var string
      */
@@ -59,7 +59,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:STREET")
+     * @Serializer\SerializedName("bmecat:STREET")
      *
      * @var string
      */
@@ -68,7 +68,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:ZIP")
+     * @Serializer\SerializedName("bmecat:ZIP")
      *
      * @var string
      */
@@ -77,7 +77,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:BOXNO")
+     * @Serializer\SerializedName("bmecat:BOXNO")
      *
      * @var string
      */
@@ -86,7 +86,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:ZIPBOX")
+     * @Serializer\SerializedName("bmecat:ZIPBOX")
      *
      * @var string
      */
@@ -95,7 +95,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:CITY")
+     * @Serializer\SerializedName("bmecat:CITY")
      *
      * @var string
      */
@@ -104,7 +104,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:COUNTRY")
+     * @Serializer\SerializedName("bmecat:COUNTRY")
      *
      * @var string
      */
@@ -113,7 +113,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:COUNTRY_CODED")
+     * @Serializer\SerializedName("bmecat:COUNTRY_CODED")
      *
      * @var string
      */
@@ -122,7 +122,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:VAT_ID")
+     * @Serializer\SerializedName("bmecat:VAT_ID")
      *
      * @var string
      */
@@ -131,7 +131,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Phone")
-     * @Serializer\SerializedName("bme:PHONE")
+     * @Serializer\SerializedName("bmecat:PHONE")
      *
      * @var Phone
      */
@@ -140,7 +140,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Fax")
-     * @Serializer\SerializedName("bme:FAX")
+     * @Serializer\SerializedName("bmecat:FAX")
      *
      * @var Fax
      */
@@ -149,7 +149,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:EMAIL")
+     * @Serializer\SerializedName("bmecat:EMAIL")
      *
      * @var string
      */
@@ -158,7 +158,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Crypto\PublicKey")
-     * @Serializer\SerializedName("bme:PUBLIC_KEY")
+     * @Serializer\SerializedName("bmecat:PUBLIC_KEY")
      *
      * @var PublicKey
      */
@@ -167,7 +167,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:URL")
+     * @Serializer\SerializedName("bmecat:URL")
      *
      * @var string
      */
@@ -176,7 +176,7 @@ class Address implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:ADDRESS_REMARKS")
+     * @Serializer\SerializedName("bmecat:ADDRESS_REMARKS")
      *
      * @var string
      */

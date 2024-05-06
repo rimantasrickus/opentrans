@@ -14,7 +14,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:CONTACT_ID")
+     * @Serializer\SerializedName("bmecat:CONTACT_ID")
      *
      * @var string
      */
@@ -23,7 +23,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:CONTACT_NAME")
+     * @Serializer\SerializedName("bmecat:CONTACT_NAME")
      *
      * @var string
      */
@@ -32,7 +32,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:FIRST_NAME")
+     * @Serializer\SerializedName("bmecat:FIRST_NAME")
      *
      * @var string
      */
@@ -41,7 +41,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:TITLE")
+     * @Serializer\SerializedName("bmecat:TITLE")
      *
      * @var string
      */
@@ -50,7 +50,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:ACADEMIC_TITLE")
+     * @Serializer\SerializedName("bmecat:ACADEMIC_TITLE")
      *
      * @var string
      */
@@ -59,7 +59,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Contact\Role")
-     * @Serializer\SerializedName("bme:CONTACT_ROLE")
+     * @Serializer\SerializedName("bmecat:CONTACT_ROLE")
      *
      * @var Role
      */
@@ -68,7 +68,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:CONTACT_DESCRIPTION")
+     * @Serializer\SerializedName("bmecat:CONTACT_DESCRIPTION")
      *
      * @var string
      */
@@ -77,7 +77,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Phone")
-     * @Serializer\SerializedName("bme:PHONE")
+     * @Serializer\SerializedName("bmecat:PHONE")
      *
      * @var Phone
      */
@@ -86,7 +86,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Fax")
-     * @Serializer\SerializedName("bme:FAX")
+     * @Serializer\SerializedName("bmecat:FAX")
      *
      * @var Fax
      */
@@ -95,7 +95,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:URL")
+     * @Serializer\SerializedName("bmecat:URL")
      *
      * @var string
      */
@@ -104,7 +104,7 @@ class Details implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Emails")
-     * @Serializer\SerializedName("bme:EMAILS")
+     * @Serializer\SerializedName("bmecat:EMAILS")
      *
      * @var Emails
      */

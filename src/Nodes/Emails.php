@@ -14,7 +14,7 @@ class Emails implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:EMAIL")
+     * @Serializer\SerializedName("bmecat:EMAIL")
      *
      * @var string
      */
@@ -22,7 +22,7 @@ class Emails implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\SerializedName("bme:PUBLIC_KEY")
+     * @Serializer\SerializedName("bmecat:PUBLIC_KEY")
      * @Serializer\Type("array<Naugrim\BMEcat\Nodes\Crypto\PublicKey>")
      * @Serializer\XmlList(inline = "true")
      *

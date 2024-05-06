@@ -10,7 +10,7 @@ class PriceFix implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("float")
-     * @Serializer\SerializedName("bme:PRICE_AMOUNT")
+     * @Serializer\SerializedName("bmecat:PRICE_AMOUNT")
      *
      * @var float
      */

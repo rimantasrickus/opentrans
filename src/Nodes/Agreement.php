@@ -32,7 +32,7 @@ class Agreement implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:AGREEMENT_ID")
+     * @Serializer\SerializedName("bmecat:AGREEMENT_ID")
      *
      * @var string
      */
@@ -41,7 +41,7 @@ class Agreement implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:AGREEMENT_LINE_ID")
+     * @Serializer\SerializedName("bmecat:AGREEMENT_LINE_ID")
      *
      * @var string
      */
@@ -50,7 +50,7 @@ class Agreement implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:AGREEMENT_START_DATE")
+     * @Serializer\SerializedName("bmecat:AGREEMENT_START_DATE")
      *
      * @var string
      */
@@ -59,7 +59,7 @@ class Agreement implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:AGREEMENT_END_DATE")
+     * @Serializer\SerializedName("bmecat:AGREEMENT_END_DATE")
      *
      * @var string
      */
@@ -68,7 +68,7 @@ class Agreement implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\SupplierIdRef")
-     * @Serializer\SerializedName("bme:SUPPLIER_IDREF")
+     * @Serializer\SerializedName("bmecat:SUPPLIER_IDREF")
      *
      * @var SupplierIdRef
      */

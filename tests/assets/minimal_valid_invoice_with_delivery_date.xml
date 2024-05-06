@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<INVOICE xmlns="http://www.opentrans.org/XMLSchema/2.1" xmlns:bme="http://www.bmecat.org/bmecat/2005" version="2.1">
+<INVOICE xmlns="http://www.opentrans.org/XMLSchema/2.1" xmlns:bmecat="http://www.bmecat.org/bmecat/2005" version="2.1">
   <INVOICE_HEADER>
     <INVOICE_INFO>
       <INVOICE_ID><![CDATA[invoice-id-1]]></INVOICE_ID>
@@ -10,15 +10,15 @@
       </DELIVERY_DATE>
       <PARTIES>
         <PARTY>
-          <bme:PARTY_ID type="issuer"><![CDATA[org.de.issuer]]></bme:PARTY_ID>
+          <bmecat:PARTY_ID type="issuer"><![CDATA[org.de.issuer]]></bmecat:PARTY_ID>
         </PARTY>
         <PARTY>
-          <bme:PARTY_ID type="buyer"><![CDATA[org.de.rcpt]]></bme:PARTY_ID>
+          <bmecat:PARTY_ID type="buyer"><![CDATA[org.de.rcpt]]></bmecat:PARTY_ID>
         </PARTY>
       </PARTIES>
       <INVOICE_ISSUER_IDREF><![CDATA[org.de.issuer]]></INVOICE_ISSUER_IDREF>
       <INVOICE_RECIPIENT_IDREF><![CDATA[org.de.rcpt]]></INVOICE_RECIPIENT_IDREF>
-      <bme:CURRENCY><![CDATA[EUR]]></bme:CURRENCY>
+      <bmecat:CURRENCY><![CDATA[EUR]]></bmecat:CURRENCY>
     </INVOICE_INFO>
   </INVOICE_HEADER>
   <INVOICE_ITEM_LIST>
@@ -26,9 +26,9 @@
       <LINE_ITEM_ID><![CDATA[line-item-id-1]]></LINE_ITEM_ID>
       <PRODUCT_ID/>
       <QUANTITY>10.0</QUANTITY>
-      <bme:ORDER_UNIT><![CDATA[C62]]></bme:ORDER_UNIT>
+      <bmecat:ORDER_UNIT><![CDATA[C62]]></bmecat:ORDER_UNIT>
       <PRODUCT_PRICE_FIX>
-        <bme:PRICE_AMOUNT>123.0</bme:PRICE_AMOUNT>
+        <bmecat:PRICE_AMOUNT>123.0</bmecat:PRICE_AMOUNT>
       </PRODUCT_PRICE_FIX>
       <PRICE_LINE_AMOUNT>1230.0</PRICE_LINE_AMOUNT>
     </INVOICE_ITEM>

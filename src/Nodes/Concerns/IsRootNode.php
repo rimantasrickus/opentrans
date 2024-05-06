@@ -8,7 +8,7 @@ trait IsRootNode
 {
     /**
      * @Serializer\Expose
-     * @Serializer\SerializedName("xmlns:bme")
+     * @Serializer\SerializedName("xmlns:bmecat")
      * @Serializer\XmlAttribute
      */
     protected $bmecatNamespace = OpenTrans::BMECAT_NAMESPACE;

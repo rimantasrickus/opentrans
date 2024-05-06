@@ -21,8 +21,6 @@
         "psr-4": {
             "Naugrim\\OpenTrans\\Tests\\": "tests/",
             "Naugrim\\OpenTrans\\": "src/",
-            "Naugrim\\BMEcat\\": "fixes/Naugrim/BMEcat",
-            "JMS\\Serializer\\": "fixes/JMS/Serializer"
         }
     },
     "require-dev": {

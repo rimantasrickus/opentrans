@@ -23,7 +23,7 @@ class PriceFix implements NodeInterface
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Product\TaxFix")
      * @Serializer\SerializedName("TAX_DETAILS_FIX")
      *
-     * @var TaxFix
+     * @var TaxFix|null
      */
     protected $taxFix;
 
@@ -45,19 +45,12 @@ class PriceFix implements NodeInterface
         return $this;
     }
 
-    /**
-     * @return TaxFix
-     */
-    public function getTaxFix(): TaxFix
+    public function getTaxFix(): ?TaxFix
     {
         return $this->taxFix;
     }
 
-    /**
-     * @param TaxFix $taxFix
-     * @return PriceFix
-     */
-    public function setTaxFix(TaxFix $taxFix): PriceFix
+    public function setTaxFix(?TaxFix $taxFix): PriceFix
     {
         $this->taxFix = $taxFix;
         return $this;

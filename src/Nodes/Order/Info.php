@@ -67,6 +67,15 @@ class Info implements NodeInterface
 
     /**
      * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("bmecat:CURRENCY")
+     *
+     * @var string|null
+     */
+    protected $currency;
+
+    /**
+     * @Serializer\Expose
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("PARTIAL_SHIPMENT_ALLOWED")
      *
@@ -78,7 +87,7 @@ class Info implements NodeInterface
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Payment\Payment")
      * @Serializer\SerializedName("PAYMENT")
      *
-     * @var Payment
+     * @var Payment|null
      */
     protected $payment;
 
@@ -199,6 +208,17 @@ class Info implements NodeInterface
         return $this;
     }
 
+    public function getCurrency(): ?string
+    {
+        return $this->currency;
+    }
+
+    public function setCurrency(?string $currency): Info
+    {
+        $this->currency = $currency;
+        return $this;
+    }
+
     public function setPartialShipmentAllowed(bool $partialShipmentAllowed): self
     {
         $this->partialShipmentAllowed = $partialShipmentAllowed;
@@ -213,12 +233,12 @@ class Info implements NodeInterface
         return $this->partialShipmentAllowed;
     }
 
-    public function getPayment(): Payment
+    public function getPayment(): ?Payment
     {
         return $this->payment;
     }
 
-    public function setPayment(Payment $payment): Info
+    public function setPayment(?Payment $payment): Info
     {
         $this->payment = $payment;
         return $this;

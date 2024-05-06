@@ -27,21 +27,21 @@ class Account implements NodeInterface
      * @Serializer\Expose
      * @Serializer\SerializedName("BANK_CODE")
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\BankCode")
-     * @var BankCode
+     * @var BankCode|null
      */
     protected $bankCode;
 
     /**
      * @Serializer\Expose
      * @Serializer\SerializedName("BANK_NAME")
-     * @var string
+     * @var string|null
      */
     protected $bankName;
 
     /**
      * @Serializer\Expose
      * @Serializer\SerializedName("BANK_COUNTRY")
-     * @var string
+     * @var string|null
      */
     protected $bankCountry;
 
@@ -81,55 +81,34 @@ class Account implements NodeInterface
         return $this;
     }
 
-    /**
-     * @return BankCode
-     */
-    public function getBankCode(): BankCode
+    public function getBankCode(): ?BankCode
     {
         return $this->bankCode;
     }
 
-    /**
-     * @param BankCode $bankCode
-     * @return Account
-     */
-    public function setBankCode(BankCode $bankCode): Account
+    public function setBankCode(?BankCode $bankCode): Account
     {
         $this->bankCode = $bankCode;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBankName(): string
+    public function getBankName(): ?string
     {
         return $this->bankName;
     }
 
-    /**
-     * @param string $bankName
-     * @return Account
-     */
-    public function setBankName(string $bankName): Account
+    public function setBankName(?string $bankName): Account
     {
         $this->bankName = $bankName;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getBankCountry(): string
+    public function getBankCountry(): ?string
     {
         return $this->bankCountry;
     }
 
-    /**
-     * @param string $bankCountry
-     * @return Account
-     */
-    public function setBankCountry(string $bankCountry): Account
+    public function setBankCountry(?string $bankCountry): Account
     {
         $this->bankCountry = $bankCountry;
         return $this;

@@ -54,7 +54,7 @@ class Item implements NodeInterface
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("PARTIAL_SHIPMENT_ALLOWED")
      *
-     * @var boolean
+     * @var boolean|null
      */
     protected $partialShipmentAllowed;
 
@@ -63,7 +63,7 @@ class Item implements NodeInterface
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\DeliveryDate")
      * @Serializer\SerializedName("DELIVERY_DATE")
      *
-     * @var DeliveryDate
+     * @var DeliveryDate|null
      */
     protected $deliveryDate;
 
@@ -72,7 +72,7 @@ class Item implements NodeInterface
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Product\PriceFix")
      * @Serializer\SerializedName("PRODUCT_PRICE_FIX")
      *
-     * @var PriceFix
+     * @var PriceFix|null
      */
     protected $priceFix;
 
@@ -81,7 +81,7 @@ class Item implements NodeInterface
      * @Serializer\Type("float")
      * @Serializer\SerializedName("PRICE_LINE_AMOUNT")
      *
-     * @var float
+     * @var float|null
      */
     protected $priceLineAmount;
 
@@ -157,54 +157,40 @@ class Item implements NodeInterface
         return $this;
     }
 
-    /**
-     * @return PriceFix
-     */
-    public function getPriceFix(): PriceFix
+    public function getPriceFix(): ?PriceFix
     {
         return $this->priceFix;
     }
 
-    /**
-     * @param PriceFix $priceFix
-     * @return Item
-     */
-    public function setPriceFix(PriceFix $priceFix): Item
+    public function setPriceFix(?PriceFix $priceFix): Item
     {
         $this->priceFix = $priceFix;
         return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getPriceLineAmount(): float
+    public function getPriceLineAmount(): ?float
     {
         return $this->priceLineAmount;
     }
 
-    /**
-     * @param float $priceLineAmount
-     * @return Item
-     */
-    public function setPriceLineAmount(float $priceLineAmount): Item
+    public function setPriceLineAmount(?float $priceLineAmount): Item
     {
         $this->priceLineAmount = $priceLineAmount;
         return $this;
     }
 
-    public function getDeliveryDate(): DeliveryDate
+    public function getDeliveryDate(): ?DeliveryDate
     {
         return $this->deliveryDate;
     }
 
-    public function setDeliveryDate(DeliveryDate $deliveryDate): self
+    public function setDeliveryDate(?DeliveryDate $deliveryDate): self
     {
         $this->deliveryDate = $deliveryDate;
         return $this;
     }
 
-    public function setPartialShipmentAllowed(bool $partialShipmentAllowed): self
+    public function setPartialShipmentAllowed(?bool $partialShipmentAllowed): self
     {
         $this->partialShipmentAllowed = $partialShipmentAllowed;
         return $this;
@@ -213,7 +199,7 @@ class Item implements NodeInterface
     /**
      * @return bool
      */
-    public function isPartialShipmentAllowed(): bool
+    public function isPartialShipmentAllowed(): ?bool
     {
         return $this->partialShipmentAllowed;
     }

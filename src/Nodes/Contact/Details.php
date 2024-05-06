@@ -16,7 +16,7 @@ class Details implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("bmecat:CONTACT_ID")
      *
-     * @var string
+     * @var string|null
      */
     public $id;
 
@@ -34,7 +34,7 @@ class Details implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("bmecat:FIRST_NAME")
      *
-     * @var string
+     * @var string|null
      */
     protected $firstName;
 
@@ -43,7 +43,7 @@ class Details implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("bmecat:TITLE")
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
 
@@ -52,7 +52,7 @@ class Details implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("bmecat:ACADEMIC_TITLE")
      *
-     * @var string
+     * @var string|null
      */
     protected $academicTitle;
 
@@ -61,7 +61,7 @@ class Details implements NodeInterface
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Contact\Role")
      * @Serializer\SerializedName("bmecat:CONTACT_ROLE")
      *
-     * @var Role
+     * @var Role|null
      */
     protected $role;
 
@@ -70,16 +70,16 @@ class Details implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("bmecat:CONTACT_DESCRIPTION")
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Phone")
      * @Serializer\SerializedName("bmecat:PHONE")
      *
-     * @var Phone
+     * @var Phone|null
      */
     protected $phone;
 
@@ -88,7 +88,7 @@ class Details implements NodeInterface
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Fax")
      * @Serializer\SerializedName("bmecat:FAX")
      *
-     * @var Fax
+     * @var Fax|null
      */
     protected $fax;
 
@@ -97,206 +97,136 @@ class Details implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("bmecat:URL")
      *
-     * @var string
+     * @var string|null
      */
     protected $url;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\Emails")
      * @Serializer\SerializedName("bmecat:EMAILS")
      *
-     * @var Emails
+     * @var Emails|null
      */
     protected $emails;
 
 
-    /**
-     * @return string
-     */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $id
-     * @return Details
-     */
-    public function setId(string $id): Details
+    public function setId(?string $id): Details
     {
         $this->id = $id;
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     * @return Details
-     */
     public function setName(string $name): Details
     {
         $this->name = $name;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFirstName(): string
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
 
-    /**
-     * @param string $firstName
-     * @return Details
-     */
-    public function setFirstName(string $firstName): Details
+    public function setFirstName(?string $firstName): Details
     {
         $this->firstName = $firstName;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    /**
-     * @param string $title
-     * @return Details
-     */
-    public function setTitle(string $title): Details
+    public function setTitle(?string $title): Details
     {
         $this->title = $title;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getAcademicTitle(): string
+    public function getAcademicTitle(): ?string
     {
         return $this->academicTitle;
     }
 
-    /**
-     * @param string $academicTitle
-     * @return Details
-     */
-    public function setAcademicTitle(string $academicTitle): Details
+    public function setAcademicTitle(?string $academicTitle): Details
     {
         $this->academicTitle = $academicTitle;
         return $this;
     }
 
-    /**
-     * @return Role
-     */
-    public function getRole(): Role
+    public function getRole(): ?Role
     {
         return $this->role;
     }
 
-    /**
-     * @param Role $role
-     * @return Details
-     */
-    public function setRole(Role $role): Details
+    public function setRole(?Role $role): Details
     {
         $this->role = $role;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     * @return Details
-     */
-    public function setDescription(string $description): Details
+    public function setDescription(?string $description): Details
     {
         $this->description = $description;
         return $this;
     }
 
-    /**
-     * @return Phone
-     */
-    public function getPhone(): Phone
+    public function getPhone(): ?Phone
     {
         return $this->phone;
     }
 
-    /**
-     * @param Phone $phone
-     * @return Details
-     */
-    public function setPhone(Phone $phone): Details
+    public function setPhone(?Phone $phone): Details
     {
         $this->phone = $phone;
         return $this;
     }
 
-    /**
-     * @return Fax
-     */
-    public function getFax(): Fax
+    public function getFax(): ?Fax
     {
         return $this->fax;
     }
 
-    /**
-     * @param Fax $fax
-     * @return Details
-     */
-    public function setFax(Fax $fax): Details
+    public function setFax(?Fax $fax): Details
     {
         $this->fax = $fax;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
 
-    /**
-     * @param string $url
-     * @return Details
-     */
-    public function setUrl(string $url): Details
+    public function setUrl(?string $url): Details
     {
         $this->url = $url;
         return $this;
     }
 
-    public function getEmails(): Emails
+    public function getEmails(): ?Emails
     {
         return $this->emails;
     }
 
-    public function setEmails(Emails $emails): Details
+    public function setEmails(?Emails $emails): Details
     {
         $this->emails = $emails;
         return $this;

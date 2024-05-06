@@ -20,7 +20,7 @@ class PaymentTerms implements NodeInterface
      * @Serializer\Type("string")
      * @Serializer\SerializedName("VALUE_DATE")
      *
-     * @var string
+     * @var string|null
      */
     private $valueDate;
 
@@ -43,12 +43,12 @@ class PaymentTerms implements NodeInterface
         return $this;
     }
 
-    public function getValueDate(): string
+    public function getValueDate(): ?string
     {
         return $this->valueDate;
     }
 
-    public function setValueDate(string $valueDate): PaymentTerms
+    public function setValueDate(?string $valueDate): PaymentTerms
     {
         $this->valueDate = $valueDate;
         return $this;

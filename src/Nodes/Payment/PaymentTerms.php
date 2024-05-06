@@ -3,7 +3,7 @@
 namespace Naugrim\OpenTrans\Nodes\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
-use Naugrim\OpenTrans\Nodes\Order\PaymentTime;
+use Naugrim\OpenTrans\Nodes\Payment\PaymentTime;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 
 class PaymentTerms implements NodeInterface

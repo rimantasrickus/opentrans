@@ -2,7 +2,8 @@
 
 namespace Naugrim\OpenTrans\Nodes\DispatchNotification;
 
-use /** @noinspection PhpUnusedAliasInspection */
+use
+    /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\OpenTrans\Nodes\ProductId;
@@ -29,10 +30,10 @@ class Item implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("float")
+     * @Serializer\Type("int")
      * @Serializer\SerializedName("QUANTITY")
      *
-     * @var float
+     * @var int
      */
     protected $quantity;
 
@@ -53,7 +54,7 @@ class Item implements NodeInterface
      * @var OrderReference
      */
     protected $orderReference;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\OpenTrans\Nodes\DispatchNotification\PartiesReference")
@@ -152,7 +153,7 @@ class Item implements NodeInterface
         $this->partiesReference = $partiesReference;
         return $this;
     }
-    
+
     /**
      * @return OrderReference
      */

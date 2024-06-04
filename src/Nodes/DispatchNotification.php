@@ -53,6 +53,24 @@ class DispatchNotification implements NodeInterface
     protected $summary;
 
     /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     * @return DispatchNotification
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
      * @return Header
      */
     public function getHeader(): Header

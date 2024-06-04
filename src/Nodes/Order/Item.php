@@ -2,12 +2,14 @@
 
 namespace Naugrim\OpenTrans\Nodes\Order;
 
+use Naugrim\OpenTrans\Nodes\Remarks;
+use Naugrim\OpenTrans\Nodes\ProductId;
+use Naugrim\BMEcat\Builder\NodeBuilder;
+use Naugrim\OpenTrans\Nodes\DeliveryDate;
 use JMS\Serializer\Annotation as Serializer;
+use Naugrim\OpenTrans\Nodes\Product\PriceFix;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\OpenTrans\Nodes\Concerns\HasUdxItems;
-use Naugrim\OpenTrans\Nodes\DeliveryDate;
-use Naugrim\OpenTrans\Nodes\Product\PriceFix;
-use Naugrim\OpenTrans\Nodes\ProductId;
 
 class Item implements NodeInterface
 {
@@ -84,6 +86,16 @@ class Item implements NodeInterface
      * @var float|null
      */
     protected $priceLineAmount;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("array<Naugrim\OpenTrans\Nodes\Remarks>")
+     * @Serializer\SerializedName("REMARKS")
+     * @Serializer\XmlList(inline = true, entry = "REMARKS")
+     *
+     * @var Remarks[]
+     */
+    protected $remarks;
 
     /**
      * @return string
@@ -202,5 +214,40 @@ class Item implements NodeInterface
     public function isPartialShipmentAllowed(): ?bool
     {
         return $this->partialShipmentAllowed;
+    }
+
+    /**
+     * @return Remarks[]
+     */
+    public function getRemarks(): array
+    {
+        return $this->remarks;
+    }
+
+    /**
+     * @param Remarks[] $remarks
+     * @return Item
+     * @throws InvalidSetterException
+     * @throws UnknownKeyException
+     */
+    public function setRemarks(array $remarks): Item
+    {
+        foreach ($remarks as $remark) {
+            if (!$remark instanceof Remarks) {
+                $remark = NodeBuilder::fromArray($remark, new Remarks());
+            }
+            $this->addRemark($remark);
+        }
+        return $this;
+    }
+
+    /**
+     * @param Remarks $remark
+     * @return $this
+     */
+    public function addRemark(Remarks $remark)
+    {
+        $this->remarks[] = $remark;
+        return $this;
     }
 }

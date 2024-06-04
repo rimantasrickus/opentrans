@@ -25,7 +25,7 @@
       <PRODUCT_ID>
         <bmecat:SUPPLIER_PID><![CDATA[product-number-1]]></bmecat:SUPPLIER_PID>
       </PRODUCT_ID>
-      <QUANTITY>5.0</QUANTITY>
+      <QUANTITY>5</QUANTITY>
       <bmecat:ORDER_UNIT><![CDATA[C62]]></bmecat:ORDER_UNIT>
     </ORDERRESPONSE_ITEM>
   </ORDERRESPONSE_ITEM_LIST>

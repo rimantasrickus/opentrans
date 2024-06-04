@@ -33,10 +33,10 @@ class Item implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("float")
+     * @Serializer\Type("int")
      * @Serializer\SerializedName("QUANTITY")
      *
-     * @var float
+     * @var int
      */
     protected $quantity;
 

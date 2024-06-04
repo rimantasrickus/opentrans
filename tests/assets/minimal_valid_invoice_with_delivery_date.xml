@@ -25,7 +25,7 @@
     <INVOICE_ITEM>
       <LINE_ITEM_ID><![CDATA[line-item-id-1]]></LINE_ITEM_ID>
       <PRODUCT_ID/>
-      <QUANTITY>10.0</QUANTITY>
+      <QUANTITY>10</QUANTITY>
       <bmecat:ORDER_UNIT><![CDATA[C62]]></bmecat:ORDER_UNIT>
       <PRODUCT_PRICE_FIX>
         <bmecat:PRICE_AMOUNT>123.0</bmecat:PRICE_AMOUNT>

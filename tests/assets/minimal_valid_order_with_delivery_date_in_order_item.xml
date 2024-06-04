@@ -24,7 +24,7 @@
       <PRODUCT_ID>
         <bmecat:SUPPLIER_PID><![CDATA[product-number-1]]></bmecat:SUPPLIER_PID>
       </PRODUCT_ID>
-      <QUANTITY>10.0</QUANTITY>
+      <QUANTITY>10</QUANTITY>
       <bmecat:ORDER_UNIT><![CDATA[C62]]></bmecat:ORDER_UNIT>
       <DELIVERY_DATE>
         <DELIVERY_START_DATE><![CDATA[2020-02-27]]></DELIVERY_START_DATE>
